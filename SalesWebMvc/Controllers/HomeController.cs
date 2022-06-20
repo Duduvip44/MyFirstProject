@@ -17,6 +17,9 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult About()
         {
+            {
+                Console.WriteLine("Hi");
+            };
             ViewData["Message"] = "Salles Web MVC APP from c# Course";
             ViewData["Aluno"] = "Eduardo Sousa Silva";
             ViewData["Email"] = "essousa7@gmail.com";
@@ -39,7 +42,7 @@ namespace SalesWebMvc.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new SalesWebMvc.Models.ViewModels.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
