@@ -13,7 +13,7 @@ namespace SalesWebMvc.Models
         //Construtor
         public Department() { }
 
-        public Department(int id, string name)
+        public  Department(int id, string name)
         {
             Id = id;
             Name = name;
